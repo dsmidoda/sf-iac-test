@@ -1,12 +1,3 @@
-terraform {
-  backend "remote" {
-    organization = "GDA-ELSA-Organization"
-    workspaces {
-      name = "test-snnowflake-iac-2"
-    }
-  }
-}
-
 provider snowflake {
   username = "dawidsmidoda"
   account  = "zg95002"
