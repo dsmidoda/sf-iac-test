@@ -1,4 +1,4 @@
-provider snowflake {
+provider "snowflake" {
   username = "dawidsmidoda"
   account  = "zg95002"
   region   = "eu-central-1"
