@@ -24,7 +24,7 @@ jobs:
         uses: hashicorp/setup-terraform@v1
         
       - name: Terraform State
-        run: terraform state replace-provider -- -/snowflake chanzuckerberg/snowflake
+        run: terraform state replace-provider hashicorp/snowflake hashicorp/chanzuckerberg/snowflake
         
       # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
       - name: Terraform Init
