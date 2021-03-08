@@ -24,11 +24,11 @@ jobs:
         uses: hashicorp/setup-terraform@v1
       
       - name: Setup provider
-        run: curl https://raw.githubusercontent.com/chanzuckerberg/terraform-provider-snowflake/main/download.sh | bash -s -- -b $HOME/.terraform.d/plugins
+        run: curl https://raw.githubusercontent.com/chanzuckerberg/terraform-provider-snowflake/main/download.sh | bash -s -- -b ./src/main/.terraform.d/plugins
       
       # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
       - name: Terraform Init
-        run: terraform -chdir=./src/main providers mirror ~/.terraform.d/plugins
+        run: terraform -chdir=./src/main providers mirror ./src/main/.terraform.d/plugins
 
       # Generates an execution plan for Terraform
       - name: Terraform Plan
