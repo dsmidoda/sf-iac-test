@@ -29,6 +29,9 @@ jobs:
       # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
       - name: Terraform Mirror
         run: terraform providers mirror ./src/main/.terraform.d/plugins
+      
+      - name: Terraform Init
+        run: terraform -chdir=./src/main init
         
       # Generates an execution plan for Terraform
       - name: Terraform Plan
