@@ -16,9 +16,11 @@ terraform {
     shell = {
       source  = "scottwinkler/shell"
       version = "1.7.7"
+    }
   }
 }
-provider snowflake {
+  
+provider "snowflake" {
   username = "dawidsmidoda"
   account  = "zg95002"
   region   = "eu-central-1"
