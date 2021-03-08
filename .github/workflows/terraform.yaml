@@ -1,27 +1,30 @@
 name: Terraform_v1
 
-on: workflow_dispatch  
-  
+on: workflow_dispatch
+
 jobs:
   terraform:
     runs-on: ubuntu-latest
     env:
-      ARM_CLIENT_ID: '8c66bdff-56cc-420d-bbcf-aacf554c41fb'
-      ARM_CLIENT_SECRET: 'P_J.9Zd3GH.DAsZ4aukS88D76R-rFPm745'
-      ARM_SUBSCRIPTION_ID: '6bd2e8a6-1e70-4479-b096-a4d345dfa39d'
-      ARM_TENANT_ID: '5aff4dce-2c57-4169-9cc9-464ba4b28699'
+      ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      TF_VAR_sf_username: ${{ secrets.SF_USERNAME }}
+      TF_VAR_sf_password: ${{ secrets.SF_PASSWORD }}
+      TF_VAR_sf_account: ${{ secrets.SF_ACCOUNT }}
 
-    steps:   
+    steps:
       # Checkout the repository to the GitHub Actions runner
       - name: Checkout
         uses: actions/checkout@v2
-             
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
-        
+
       - name: Terraform Init
         run: terraform -chdir=./src/main init
-        
+
       - name: Terraform Plan
         run: terraform -chdir=./src/main plan
 
