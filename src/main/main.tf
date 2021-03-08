@@ -13,6 +13,9 @@ terraform {
       source = "chanzuckerberg/snowflake"
       version = ">= 0.20.0"
     }
+    shell = {
+      source  = "scottwinkler/shell"
+      version = "1.7.7"
   }
 }
 provider snowflake {
