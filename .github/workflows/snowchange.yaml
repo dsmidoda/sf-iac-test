@@ -27,4 +27,4 @@ jobs:
       
       - name: run snowchange
         run: |
-          snowchange -f "./snowchange_objects" -a zg95002.eu-central-1.azure -u dawidsmidoda -r SYSADMIN -w COMPUTE_WH --create-change-history-table
+          snowchange -f "./snowchange_objects" -a zg95002.eu-central-1 -u dawidsmidoda -r SYSADMIN -w COMPUTE_WH --create-change-history-table
