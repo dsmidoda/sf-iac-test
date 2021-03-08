@@ -1,7 +1,8 @@
 variable "db_name" {
-  default = "test_iac_db_2"
+    description = "DB name"
 }
 
 variable "comment" {
-  default = "first db created through terraform"
+    description = "database comment"
+    default = "first db created through terraform"
 }
