@@ -1,5 +1,5 @@
 variable "db_name" {
-  default = "test_iac_db"
+  default = "test_iac_db_2"
 }
 
 variable "comment" {
