@@ -30,9 +30,6 @@ jobs:
       - name: Terraform Init
         run: terraform providers mirror ~/.terraform.d/plugins
 
-      - name: Terraform Format
-        run: terraform -chdir=./src/main fmt -check
-
       # Generates an execution plan for Terraform
       - name: Terraform Plan
         run: terraform -chdir=./src/main plan
