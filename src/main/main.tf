@@ -1,3 +1,4 @@
 module "snowflake_setup" {
-  source = "../modules"
+    source = "../modules"
+    db_name = "first_db"
 }
