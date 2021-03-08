@@ -3,12 +3,12 @@ name: Terraform_v1
 on: workflow_dispatch  
 
 env:
-          ARM_CLIENT_ID: '8c66bdff-56cc-420d-bbcf-aacf554c41fb'
-          ARM_CLIENT_SECRET: 'P_J.9Zd3GH.DAsZ4aukS88D76R-rFPm745'
-          ARM_SUBSCRIPTION_ID: '6bd2e8a6-1e70-4479-b096-a4d345dfa39d'
-          ARM_TENANT_ID: '5aff4dce-2c57-4169-9cc9-464ba4b28699'
-          TF_VAR_location: 'eastus'
-
+  ARM_CLIENT_ID: '8c66bdff-56cc-420d-bbcf-aacf554c41fb'
+  ARM_CLIENT_SECRET: 'P_J.9Zd3GH.DAsZ4aukS88D76R-rFPm745'
+  ARM_SUBSCRIPTION_ID: '6bd2e8a6-1e70-4479-b096-a4d345dfa39d'
+  ARM_TENANT_ID: '5aff4dce-2c57-4169-9cc9-464ba4b28699'
+  TF_VAR_location: 'eastus'
+  
 jobs:
   terraform:
     runs-on: ubuntu-latest
