@@ -9,10 +9,10 @@ terraform {
   }
 }
 
-provider "snowflake" {
-  username = "dawidsmidoda"
-  account  = "zg95002"
-  region   = "eu-central-1"
-  password = "Dawid32161!"
-  role     = "SYSADMIN"
+provider snowflake {
+  username = var.sf_username
+  account  = var.sf_account
+  region   = var.sf_region
+  password = var.sf_password
+  role     = var.sf_role
 }
